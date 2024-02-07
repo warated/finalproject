@@ -33,7 +33,7 @@
         <div class="d-flex justify-content-center" style="margin-bottom: 50px;">
             <?php 
                 try {
-                    $dbh = new PDO("mysql:host=mariadb;dbname=TestDB", "root", "root");
+                    $dbh = new PDO("mysql:host=mariadb;dbname=kahuna", "root", "root");
                     echo '✅ Successfully established connection to MariaDB.';
                 } catch (PDOException $e) {
                     echo '<p>❌ Connection to MariaDB Failed : <small>' . $e->getMessage() . '</small></p>';

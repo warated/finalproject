@@ -66,3 +66,7 @@
 192.168.65.1 - - [07/Feb/2024:11:36:33 +0000] "GET /assets/mariadb.png HTTP/1.1" 304 0 "http://localhost:8000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
 192.168.65.1 - - [07/Feb/2024:11:36:43 +0000] "GET / HTTP/1.1" 200 1860 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
 192.168.65.1 - - [07/Feb/2024:11:36:52 +0000] "GET / HTTP/1.1" 200 1767 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+192.168.65.1 - - [07/Feb/2024:12:48:36 +0000] "GET / HTTP/1.1" 200 1947 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+192.168.65.1 - - [07/Feb/2024:12:48:36 +0000] "GET /assets/php.png HTTP/1.1" 200 80678 "http://localhost:8000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+192.168.65.1 - - [07/Feb/2024:12:48:36 +0000] "GET /assets/mariadb.png HTTP/1.1" 200 8612 "http://localhost:8000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+192.168.65.1 - - [07/Feb/2024:12:48:47 +0000] "GET / HTTP/1.1" 200 1893 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
