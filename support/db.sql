@@ -1,2 +1,4 @@
 CREATE DATABASE IF NOT EXISTS kahuna;
 
+USE kahuna;
+

@@ -1,21 +1,29 @@
 version: '3.9'
 services:
-  web:
+  api:
     image: nginx:alpine
     ports:
       - "8000:80"
     volumes:
-      - ./:/var/www/html
-      - ./docker/conf/default.conf:/etc/nginx/conf.d/default.conf
+      - ./api:/var/www/html
+      - ./docker/conf/api.conf:/etc/nginx/conf.d/api.conf
       - ./docker/log:/var/log/nginx
     depends_on:
       php:
         condition: service_started
+  client:
+    image: nginx:alpine
+    ports:
+      - "8001:80"
+    volumes:
+      - ./client:/var/www/html
+      - ./docker/conf/client.conf:/etc/nginx/conf.d/client.conf
+      - ./docker/log:/var/log/nginx
   php:
     build:
       context: ./docker
     volumes:
-      - ./:/var/www/html
+      - ./api:/var/www/html
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
       - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
   mariadb:
@@ -35,9 +43,11 @@ services:
       - db_data:/var/lib/mysql
   print-status:
     image: busybox
-    command: "echo '---\nSERVER RUNNING AT http://localhost:8000. USE CTRL+C TO TERMINATE.\n---'"    
+    command: "echo '---\nAPI: http://localhost:8000. CLIENT: http://localhost:8001. USE CTRL+C TO TERMINATE.\n---'"
     depends_on:
-      web:
+      api:
+        condition: service_started
+      client:
         condition: service_started
       mariadb:
         condition: service_healthy
