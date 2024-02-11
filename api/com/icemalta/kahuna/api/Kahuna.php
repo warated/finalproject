@@ -1,6 +1,6 @@
 <?php
 require 'com/icemalta/kahuna/util/ApiUtil.php';
-use com\icemalta\todopal\util\ApiUtil;
+use com\icemalta\kahuna\util\ApiUtil;
 
 
 $endPoints = [];
