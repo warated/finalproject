@@ -1,31 +1,67 @@
-<!--
-    TODO This is just a sample page to ensure the environment is working. 
-    Replace with your own fantastic code!
--->
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <title>Kahuna Inc.</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/main.css">
+        <style>
+          .navbar-brand {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="container d-flex flex-column min-vh-100">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Kahuna Inc.</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link {{#ifeq currentPage 'home'}}active{{/ifeq}}" aria-current="page" href="/">Home</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" onclick="checkAndRedirect('registerproduct', loadTransaction)">Product Registration</a>
+                      </li>
 
-<head>
-    <title>SC-BED Environment Test</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-</head>
-
-<body data-bs-theme="dark">
-    <div class="container d-flex flex-column">
-        <div class="d-flex justify-content-center" style="margin-bottom: 20px;">
-            <h1>Environment Test</h1>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="logout()">Logout</a>
+                      </li>
+                    </ul>
+                    <div class="d-flex">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        
+                          
+                            
+                                  </i></span>  
+                              </a>
+                              
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+              <div id='alertArea' class="alert alert-danger" role="alert">
+                
+              </div>
+              <div id="mainContent">
+                
+              </div>
         </div>
-        <div class="d-flex justify-content-center" style="margin-bottom: 20px;">
-            <p>This is the client page.</p>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-</body>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <footer>
+      <p>&copy; Kahuna Inc. All Rights Reserved.</p>
+    </footer>
+    </body>
 </html>

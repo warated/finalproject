@@ -27,8 +27,33 @@ The services started include:
 - API Server on [http://localhost:8000](https://localhost:8000).
 - Client on [http://localhost:8001](https://localhost:8001).
 
-## Next Steps
+## Story of the API
 
-You can now start working on your final project.
+A user can register an account by default it will be registered as a user, however to be registered as admin this need to be done from the backend, for security reasons. 
 
-1. It is safe to delete the contents of the **client** folder. 
+## User Story
+
+A user after logging in, can only add the following products: 
+KHWM8199911
+KHWM8199912
+KHMW789991 
+KHWP890001 
+KHWP890002 
+KHSS988881 
+KHSS988882 
+KHSS988883 
+KHHM89762 
+KHSB0001 
+
+A product must be entered once and cannot be added again. They have the option to submit a ticket for the product, and the ticket will be sent and visible to the admins.
+
+Users are allowed to register their product which their warranty ends according to what the user entered. 
+
+## Admin Story
+
+An admin can add products and they have fully access to the submitted tickets which then they can reply according to the Ticket ID, which for every ticket submitted there should be a reply which the system won't allow you to add more replies than actual tickets.
+
+Other than that, the admin have the same abilities as a user.
+
+
+

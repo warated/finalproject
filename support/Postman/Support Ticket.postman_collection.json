@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "f33d5e84-fa81-4e5f-a730-7563d10e38c4",
+		"name": "Support Ticket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32461376"
+	},
+	"item": [
+		{
+			"name": "Add Ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Alfred",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Washing machine leaking",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/kahuna/api/SupportTicket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"kahuna",
+						"api",
+						"SupportTicket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ticket List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-api-user",
+						"value": "{{user}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/kahuna/api/SupportTicket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"kahuna",
+						"api",
+						"SupportTicket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Connection test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}SupportTicket",
+					"host": [
+						"{{BASE_URI}}SupportTicket"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
